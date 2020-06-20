@@ -78,6 +78,7 @@ export default () => {
       <div className={classes.content}>
         <Typography paragraph>item</Typography>
       </div>
+      <span>{process.env.REACT_APP_MY_VARIABLE}</span>
     </main>
   );
 };
