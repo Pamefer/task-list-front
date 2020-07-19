@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
@@ -41,7 +42,7 @@ export default () => {
       <List>
         {["Plata", "Brillantes", "Novedades", "Tendencia", "Más vendidos"].map(
           (text, index) => (
-            <ListItem button key={text}>
+            <ListItem button key={text} component={NavLink} to={'/buy/' + text}>
               <ListItemIcon></ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>

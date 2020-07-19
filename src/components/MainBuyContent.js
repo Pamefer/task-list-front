@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
@@ -54,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 
 export default () => {
   const classes = useStyles();
-
+  let { category } = useParams();
   return (
     <main className={classes.fullWidth}>
       <div className={classes.search}>
@@ -73,10 +74,11 @@ export default () => {
 
       <div className={classes.toolbar} />
       <div className={classes.title}>
-        <Typography variant="h6">Plata</Typography>
+        <Typography variant="h6">{category}</Typography>
       </div>
       <div className={classes.content}>
         <Typography paragraph>item</Typography>
+
       </div>
       <span>{process.env.REACT_APP_MY_VARIABLE}</span>
     </main>

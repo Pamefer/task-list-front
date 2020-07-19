@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "aws:sync": "aws s3 sync --cache-control max-age=31557600 --delete ./build s3://pammy-web"
   },
   "eslintConfig": {
     "extends": "react-app"
