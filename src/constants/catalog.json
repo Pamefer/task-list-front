@@ -1,0 +1,84 @@
+{
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/a1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/a2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/a3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/b1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/b2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/b3.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/c1.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/c2.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/c3.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Allesia",
+      "stock": 12,
+      "price": "12",
+      "description": "Hermosa pieza bañada en oro",
+      "image": "/catalog/c4.jpeg"
+    }
+  ]
+}

@@ -4,9 +4,11 @@ import { fade, makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import { catalog } from '../constants/catalog.json'
 
 const useStyles = makeStyles(theme => ({
-  toolbar: theme.mixins.toolbar,
   title: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
@@ -50,6 +52,19 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%"
+  },
+  displayCatalog: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    margin: "30px 30px 0 30px"
+  },
+  item: {
+    textAlign: "center",
+    marginBottom: "30px",
+  },
+  itemImage: {
+    maxHeight: "368px"
   }
 }));
 
@@ -58,6 +73,9 @@ export default () => {
   let { category } = useParams();
   return (
     <main className={classes.fullWidth}>
+      <div className={classes.title}>
+        <Typography variant="h6">{category}</Typography>
+      </div>
       <div className={classes.search}>
         <div className={classes.searchIcon}>
           <SearchIcon />
@@ -71,14 +89,20 @@ export default () => {
           inputProps={{ "aria-label": "search" }}
         />
       </div>
-
-      <div className={classes.toolbar} />
-      <div className={classes.title}>
-        <Typography variant="h6">{category}</Typography>
-      </div>
-      <div className={classes.content}>
-        <Typography paragraph>item</Typography>
-
+      <div className={classes.displayCatalog}>
+        {catalog.map((item) => (
+          <Card className={classes.item} key={item.id}>
+            <CardActionArea>
+              <img className={classes.itemImage} src={item.image} alt={item.name} />
+              <Typography gutterBottom variant="h5" component="h2">
+                {item.name}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {item.price}
+              </Typography>
+            </CardActionArea>
+          </Card>
+        ))}
       </div>
       <span>{process.env.REACT_APP_MY_VARIABLE}</span>
     </main>
